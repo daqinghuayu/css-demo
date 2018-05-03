@@ -38,10 +38,6 @@
 
     .active p {
       color: #4567e5;
-      -webkit-transition: color .2s ease-out;
-      -moz-transition: color .2s ease-out;
-      -o-transition: color .2s ease-out;
-      transition: color .2s ease-out;
     }
 
     .title :after {
@@ -60,16 +56,11 @@
 
     .active :after {
       width: 100%;
-      -webkit-transition: width .2s ease-out;
-      -moz-transition: width .2s ease-out;
-      -o-transition: width .2s ease-out;
-      transition: width .2s ease-out;
     }
 
     /* 按钮样式 */
 
     .btn {
-
       height: 32px;
       font-size: 22px;
       line-height: 32px;
@@ -99,7 +90,7 @@
   <div class="main">
 
     <div class="head">
-      <div class="title">
+      <div id="title" class="title">
         <p>前端学院</p>
       </div>
     </div>
@@ -112,11 +103,17 @@
 
   <script src="jquery.min.js"></script>
   <script>
-    $("#btn").click(
-      function () {
-        $(".title").toggleClass("active");
+
+    var btn = document.getElementById("btn");
+    var title = document.getElementById("title");
+
+    btn.addEventListener("click",function(){//点击btn添加删除active样式
+      if(title.classList.contains("active")){
+        title.classList.remove("active");
+      }else{
+        title.classList.add("active");
       }
-    );
+    })
   </script>
 
 
