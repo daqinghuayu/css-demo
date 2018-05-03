@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>demo04</title>
+
+  <style>
+    .card {
+      width: 250px;
+      height: 350px;
+      margin: 50px auto 0;
+      position: relative;
+      perspective: 800px;
+      transform-style: preserve-3d;
+    }
+
+    .front {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("./card_front.jpg") no-repeat center;
+      backface-visibility: hidden;
+      transition: 1s;
+
+    }
+
+    .back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("./card_back.jpg") no-repeat center;
+      transform: rotateY(-180deg);
+      backface-visibility: hidden;
+      transition: 1s;
+
+    }
+
+    .card:hover .front {
+      transform: rotateY(180deg);
+    }
+
+    .card:hover .back {
+      transform: rotateY(0deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="front"></div>
+    <div class="back"></div>
+  </div>
+
+</body>
+
+</html>
