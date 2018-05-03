@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>demo01</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
 
     .main {
       text-align: center;
@@ -103,14 +107,13 @@
 
   <script src="jquery.min.js"></script>
   <script>
-
     var btn = document.getElementById("btn");
     var title = document.getElementById("title");
 
-    btn.addEventListener("click",function(){//点击btn添加删除active样式
-      if(title.classList.contains("active")){
+    btn.addEventListener("click", function () { //点击btn添加删除active样式
+      if (title.classList.contains("active")) {
         title.classList.remove("active");
-      }else{
+      } else {
         title.classList.add("active");
       }
     })
