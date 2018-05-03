@@ -40,16 +40,19 @@ li {
   clear: both;
 }
 
-
+/* 左倾斜30度 */
 .transform1{
   transform: skew(30deg);
 }
+/* 水平压缩2倍 */
 .transform2{
   transform:scale(0.5,1);
 }
+/* 左旋转45度 */
 .transform3{
   transform:rotate(45deg);
 }
+/* x轴10px y轴20px   */
 .transform4{
   transform: translate(10px,20px);
 }
