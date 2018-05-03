@@ -1,13 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+
+    .main {
+      text-align: center;
+    }
+
+    .head {
+      margin: 50px auto;
+    }
+
+
+    /* 标题样式 */
+
+    .title {
+      line-height: 58px;
+      font-size: 26px;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .title p {
+      padding: 0 5px;
+      margin: 0;
+      -webkit-transition: color .2s ease-out;
+      -moz-transition: color .2s ease-out;
+      -o-transition: color .2s ease-out;
+      transition: color .2s ease-out;
+    }
+
+    .active p {
+      color: #4567e5;
+      -webkit-transition: color .2s ease-out;
+      -moz-transition: color .2s ease-out;
+      -o-transition: color .2s ease-out;
+      transition: color .2s ease-out;
+    }
+
+    .title :after {
+      content: '';
+      margin-left: auto;
+      margin-right: auto;
+      width: 0px;
+      height: 4px;
+      display: block;
+      background-color: #4567e5;
+      -webkit-transition: width .2s ease-out;
+      -moz-transition: width .2s ease-out;
+      -o-transition: width .2s ease-out;
+      transition: width .2s ease-out;
+    }
+
+    .active :after {
+      width: 100%;
+      -webkit-transition: width .2s ease-out;
+      -moz-transition: width .2s ease-out;
+      -o-transition: width .2s ease-out;
+      transition: width .2s ease-out;
+    }
+
+    /* 按钮样式 */
+
+    .btn {
+
+      height: 32px;
+      font-size: 22px;
+      line-height: 32px;
+      padding: 0 15px;
+      display: inline-block;
+      border: 1px solid #d2d2d2;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    .select-none {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    .btn:active {
+      background: #d2d2d2;
+    }
+  </style>
 </head>
+
 <body>
- <p>demo</p>
- 
+
+  <div class="main">
+
+    <div class="head">
+      <div class="title">
+        <p>前端学院</p>
+      </div>
+    </div>
+
+    <div id="btn" class="btn select-none">切换样式</div>
+  </div>
+
+
+
+
+  <script src="jquery.min.js"></script>
+  <script>
+    $("#btn").click(
+      function () {
+        $(".title").toggleClass("active");
+      }
+    );
+  </script>
+
+
+  <script>
+  </script>
 </body>
+
 </html>
